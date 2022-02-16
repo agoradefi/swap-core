@@ -198,4 +198,10 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     function sync() external lock {
         _update(IERC20(token0).balanceOf(address(this)), IERC20(token1).balanceOf(address(this)), reserve0, reserve1);
     }
+
+    function pull(address token) external lock {
+        address feeTo = IUniswapV2Factory(factory).feeTo();
+        uint balance = IERC20(token).balanceOf(address(this));
+        if (feeTo != address(0) && token != token0 && token != token1 && balance > 0) _safeTransfer(token, feeTo, balance);
+    }
 }
