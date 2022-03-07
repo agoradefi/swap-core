@@ -4,6 +4,7 @@ import './interfaces/IUniswapV2Factory.sol';
 import './UniswapV2Pair.sol';
 
 contract UniswapV2Factory is IUniswapV2Factory {
+    uint public fee = 1;
     address public feeTo;
     address public feeToSetter;
 
@@ -39,6 +40,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
         getPair[token1][token0] = pair; // populate mapping in the reverse direction
         allPairs.push(pair);
         emit PairCreated(token0, token1, pair, allPairs.length);
+    }
+
+    function setFee(uint _fee) external {
+        require(msg.sender == feeToSetter, 'UniswapV2: FORBIDDEN');
+        fee = _fee;
     }
 
     function setFeeTo(address _feeTo) external {

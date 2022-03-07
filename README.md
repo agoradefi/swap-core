@@ -16,8 +16,8 @@ The addition of a `pull` function that only works for non LP tokens solves the p
 
 ### Deployed Contracts
 
-- Factory - [0xE3E78432168eac2c7132395539849690258741F3](https://andromeda-explorer.metis.io/address/0xE3E78432168eac2c7132395539849690258741F3/contracts)
-- Router - [0x7578870127E7F4ec27f90A0D6df1BB42D460aAAB](https://andromeda-explorer.metis.io/address/0x7578870127E7F4ec27f90A0D6df1BB42D460aAAB/contracts)
+- Factory - [0x3c4063B964B1b3bF229315fCc4df61a694B0aE84](https://andromeda-explorer.metis.io/address/0x3c4063B964B1b3bF229315fCc4df61a694B0aE84/contracts)
+- Router - [0x63b48547A3A00CA8CddE2B32acB9d0d89Ee2B01c](https://andromeda-explorer.metis.io/address/0x63b48547A3A00CA8CddE2B32acB9d0d89Ee2B01c/contracts)
 
 ### Contract Diff Reports
 
